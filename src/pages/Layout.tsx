@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 
 const Layout = () => {
   return (
-    <div className="bg-gradient-to-r from-white to-gray-300 ">
+    <div className="bg-gradient-to-r from-white to-gray-200 ">
       <Navbar />
-      <div>
+      <div className="px-10 bg-gradient-to-r from-white to-gray-200 ">
         <Outlet />
       </div>
       {/* <Footer/> */}
