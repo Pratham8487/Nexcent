@@ -16,7 +16,7 @@ function Navbar() {
           <h1 className="text-2xl font-bold">Nexcent</h1>
         </div>
 
-        <div className="hidden md:flex gap-10 items-center">
+        <div className="hidden lg:flex gap-10 items-center">
           <Link to={`/`}>
             <span className="font-medium text-gray-700 text-lg">Home</span>
           </Link>
@@ -47,7 +47,49 @@ function Navbar() {
             }}
           >
             Register Now
-              <MoveRight size={20} color="white" />
+            <MoveRight size={20} color="white" />
+          </Button>
+        </div>
+
+        <div className="hidden md:flex lg:hidden gap-4 items-center">
+          <Link to={`/`}>
+            <span className="font-medium text-gray-700 text-base">Home</span>
+          </Link>
+          <Link to={`/features`}>
+            <span className="font-medium text-gray-700 text-base">
+              Features
+            </span>
+          </Link>
+          <Link to={`/community`}>
+            <span className="font-medium text-gray-700 text-base">
+              Community
+            </span>
+          </Link>
+          <Link to={`/blog`}>
+            <span className="font-medium text-gray-700 text-base">Blog</span>
+          </Link>
+          <Link to={`/pricing`}>
+            <span className="font-medium text-gray-700 text-base">Pricing</span>
+          </Link>
+
+          <Button
+            variant="contained"
+            size="small"
+            sx={{
+              backgroundColor: "#43A046",
+              "&:hover": {
+                backgroundColor: "#388E3B",
+              },
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+              textTransform: "none",
+              fontSize: "0.875rem",
+              padding: "4px 12px",
+            }}
+          >
+            Register
+            <MoveRight size={16} color="white" />
           </Button>
         </div>
 

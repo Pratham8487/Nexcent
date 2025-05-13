@@ -8,110 +8,147 @@ import Icon1 from "../assets/Icon-1.svg";
 import Icon2 from "../assets/Icon-2.svg";
 import Icon4 from "../assets/Icon-4.svg";
 import Icon3 from "../assets/Icon-3.svg";
+import Image from "../assets/Image.svg";
+import BlogSection from "../components/BlogSection";
 
 function HomePage() {
   return (
-    <div className="bg-gradient-to-r from-white to-gray-200 min-h-screen ">
+    <div className="bg-gradient-to-r from-white to-gray-200 min-h-screen">
       <HeroSection />
-      <div className="gap-2 flex items-center justify-center flex-col p-6">
-        <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-semibold text-[#4D4D4D] text-center max-w-4xl mx-auto leading-tight">
-          Our Clients
-        </h1>
-        <h2 className="text-[#89939E] text-base text-center">
-          We have been working with some fortune 500+ clients.
-        </h2>
-      </div>
-      <div className="gap-2 flex items-center justify-center flex-col p-6">
-        <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-semibold text-[#4D4D4D] text-center max-w-4xl mx-auto leading-tight">
-          Manage your entire community
-          <br className="hidden md:block" /> in a single system
-        </h1>
-        <h2 className="text-[#89939E] text-base text-center">
-          Who is Nextcent suitable for?
-        </h2>
+
+      <section className="container mx-auto py-10 px-4">
+        <div className="flex flex-col items-center justify-center gap-3 mb-8">
+          <h1 className="text-2xl md:text-4xl font-semibold text-[#4D4D4D] text-center">
+            Our Clients
+          </h1>
+          <h2 className="text-[#89939E] text-base text-center">
+            We have been working with some fortune 500+ clients.
+          </h2>
+        </div>
+      </section>
+
+      <section className="container mx-auto py-10 px-4">
+        <div className="flex flex-col items-center justify-center gap-3 mb-8">
+          <h1 className="text-2xl md:text-4xl font-semibold text-[#4D4D4D] text-center max-w-4xl mx-auto leading-tight">
+            Manage your entire community
+            <br className="hidden md:block" /> in a single system
+          </h1>
+          <h2 className="text-[#89939E] text-base text-center">
+            Who is Nextcent suitable for?
+          </h2>
+        </div>
+
         <BrandLogo />
-        <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row w-full p-6 justify-evenly space-y-5 md:space-y-0 md:space-x-5">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
           <Card
             title="Membership Organisations"
             description="Our membership management software provides full automation of
-        membership renewals and payments"
+            membership renewals and payments"
           />
           <Card
             title="National Association"
             description="Our membership management software provides full automation of
-        membership renewals and payments"
+            membership renewals and payments"
           />
           <Card
             title="Clubs and Groups"
             description="Our membership management software provides full automation of
-        membership renewals and payments"
+            membership renewals and payments"
           />
         </div>
+      </section>
+
+      <section className="container mx-auto py-10 px-4">
         <HeroComponent
           img={HomeImg}
-          heading={
-            <>
-              <p>The unseen of spending three years at Pixelgrade</p>
-            </>
-          }
+          heading={<p>The unseen of spending three years at Pixelgrade</p>}
         />
-        <div className="grid grid-cols-1 w-full py-8 sm:px-2 lg:px-12 md:px-4 sm:grid-cols-1 md:grid-cols-2 bg-gray-200 rounded-lg">
-          <div className="flex flex-col gap-4 justify-center sm:pl-4 ">
-            <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-semibold text-[#4D4D4D] text-balance text-center sm:text-left">
-              Helping a local <br />
-              <span className="text-[#43A046]">Business reinvent itself</span>
-            </h1>
+      </section>
 
-            <h2 className="text-[#263238] text-base text-balance text-center sm:text-left">
-              We reach here with out hardwork and dedication
-            </h2>
-          </div>
-          <div className="px-4 md:px-8 py-6 space-y-6 md:space-y-0 md:space-x-5">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-5 justify-start md:justify-center">
-              <div className="flex gap-3 items-center group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
-                <img src={Icon1} className="h-7 w-7 object-contain" />
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#4D4D4D] text-wrap break-words">
-                  2,245,341 <br />
-                  <span className="text-[#4D4D4D] text-sm font-normal block md:inline-block border-b border-transparent group-hover:border-gray-300">
-                    Members
-                  </span>
-                </h2>
-              </div>
-
-              <div className="flex gap-3 items-center group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
-                <img src={Icon2} className="h-10 w-10 object-contain" />
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#4D4D4D] text-wrap break-words">
-                  46,328 <br />
-                  <span className="text-[#4D4D4D] text-sm font-normal block md:inline-block border-b border-transparent group-hover:border-gray-300">
-                    Clubs
-                  </span>
-                </h2>
-              </div>
+      <section className="container mx-auto py-10 px-4">
+        <div className="bg-gray-200 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-10">
+            <div className="flex flex-col gap-4 justify-center">
+              <h1 className="text-2xl md:text-4xl font-semibold text-[#4D4D4D] text-center md:text-left">
+                Helping a local <br />
+                <span className="text-[#43A046]">Business reinvent itself</span>
+              </h1>
+              <h2 className="text-[#263238] text-base text-center md:text-left">
+                We reach here with our hardwork and dedication
+              </h2>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 md:gap-5 justify-start md:justify-center">
-              <div className="flex gap-3 items-center group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
-                <img src={Icon3} className="h-7 w-7 object-contain" />
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#4D4D4D] text-wrap break-words">
-                  828,867 <br />
-                  <span className="text-[#4D4D4D] text-sm font-normal block md:inline-block border-b border-transparent group-hover:border-gray-300">
-                    Event Bookings
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex gap-3 items-center group p-2 rounded-lg transition-all duration-300">
+                <img
+                  src={Icon1}
+                  alt="Members Icon"
+                  className="h-7 w-7 object-contain"
+                />
+                <div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#4D4D4D]">
+                    2,245,341
+                  </h2>
+                  <span className="text-[#4D4D4D] text-sm font-normal border-b border-transparent group-hover:border-gray-300">
+                    Members
                   </span>
-                </h2>
+                </div>
               </div>
 
-              <div className="flex gap-3 items-center group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300">
-                <img src={Icon4} className="h-6 w-6 object-contain" />
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#4D4D4D] text-wrap break-words">
-                  1,926,436 <br />
-                  <span className="text-[#4D4D4D] text-sm font-normal block md:inline-block border-b border-transparent group-hover:border-gray-300">
+              <div className="flex gap-3 items-center group p-2 rounded-lg transition-all duration-300">
+                <img
+                  src={Icon2}
+                  alt="Clubs Icon"
+                  className="h-7 w-7 object-contain"
+                />
+                <div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#4D4D4D]">
+                    46,328
+                  </h2>
+                  <span className="text-[#4D4D4D] text-sm font-normal border-b border-transparent group-hover:border-gray-300">
+                    Clubs
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex gap-3 items-center group p-2 rounded-lg transition-all duration-300">
+                <img
+                  src={Icon3}
+                  alt="Event Bookings Icon"
+                  className="h-7 w-7 object-contain"
+                />
+                <div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#4D4D4D]">
+                    828,867
+                  </h2>
+                  <span className="text-[#4D4D4D] text-sm font-normal border-b border-transparent group-hover:border-gray-300">
+                    Event Bookings
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex gap-3 items-center group p-2 rounded-lg transition-all duration-300">
+                <img
+                  src={Icon4}
+                  alt="Payments Icon"
+                  className="h-7 w-7 object-contain"
+                />
+                <div>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[#4D4D4D]">
+                    1,926,436
+                  </h2>
+                  <span className="text-[#4D4D4D] text-sm font-normal border-b border-transparent group-hover:border-gray-300">
                     Payments
                   </span>
-                </h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="container mx-auto py-10 px-4">
         <HeroComponent
           img={Pana}
           heading={<p>How to design your site footer like we did</p>}
@@ -129,7 +166,38 @@ function HomePage() {
             </p>
           }
         />
-      </div>
+      </section>
+
+      <section className="container mx-auto py-10 px-4">
+        <HeroComponent
+          img={Image}
+          // heading={<p>How to design your site footer like we did</p>}
+          description={
+            <>
+              <p>
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+                lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
+                eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
+                laoreet elit at ligula molestie, nec molestie mi blandit.
+                Suspendisse cursus tellus sed augue ultrices, quis tristique
+                nulla sodales. Suspendisse eget lorem eu turpis vestibulum
+                pretium. Suspendisse potenti. Quisque malesuada enim sapien,
+                vitae placerat ante feugiat eget. Quisque vulputate odio neque,
+                eget efficitur libero condimentum id. Curabitur id nibh id sem
+                dignissim finibus ac sit amet magna.
+              </p>
+              <h2 className="text-[#43A046] font-semibold text-lg py-3 ">Tim Smith</h2>
+              <p>British Dragon Boat Racing Association</p>
+              <BrandLogo />
+
+            </>
+          }
+          buttonRender={false}
+        />
+      </section>
+
+      <BlogSection />
     </div>
   );
 }

@@ -6,7 +6,7 @@ function NotFoundPage() {
     navigate(-1);
   };
   return (
-    <div>
+    <div className="min-h-screen">
       <h1 className="text-4xl font-bold text-center mt-20 text-red-500">
         <span className="font-bold text-red-700">404</span> - Page Not Found
       </h1>
